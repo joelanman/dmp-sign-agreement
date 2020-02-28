@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Framework Agreement</h1>
+
+      <p class="govuk-!-font-weight-bold">
+        If any of the information about your company is incorrect <a href="#">contact cloud_digital@crowncommercial.gov.uk</a> before signing.
+      </p>
+
+      <form class="form" action="/confirmation" method="post">
+
+        <h2 class="govuk-heading-m">1.      The Appointment</h2>
+ 
+
+<p>
+This section includes terms about the Supplier appointment.</p>
+
+<h3 class="govuk-heading-s">1.1       Appointment</h3>
+
+<p>Under the terms of this Framework Agreement (RM1557.12) and the Supplier’s Application, the Minister for the Cabinet Office, represented by the Crown Commercial Service (CCS), 9th Floor, The Capital, Old Hall Street, Liverpool, L3 9PP, appoints:</p>
+
+ 
+
+<p>company: [insert company name]</p>
+
+ 
+
+<p>registered address: [insert company address]</p>
+
+ 
+
+<p>company number: [insert company number]</p>
+
+ 
+
+<p>(the ‘Supplier’), as a Framework Agreement Supplier of G-Cloud Services who can be considered for Call-Off Contracts as outlined in the Contract Notice in the Official Journal of the European Union reference RM1557.12 (OJEU Contract Notice).</p>
+
+ 
+
+<p>1.2       Appointment is to: [insert Lots awarded]</p>
+
+ 
+
+<p>1.3       Appointment starts at: 2 July 2020</p>
+
+ 
+
+<p>1.4       Appointment ends at: 23:59 on 1 July 2021 (unless this Framework Agreement is extended by CCS or Ends early).</p>
+
+ 
+
+<p>1.5       Framework Agreement extension: Up to 12 months, by CCS giving written notice to Suppliers.</p>
+
+ 
+
+<p>1.6       Framework Agreement term: From and including the date at 1.3 above Appointment starts at) to and including the date at 1.4 above (Appointment ends at).</p>
+
+ 
+
+<p>1.7       Call-Off Contract length: Up to 24 months plus 2 optional extension periods of up to 12 months each.</p>
+
+ 
+
+<p>1.8       The Parties agree that they have read this Framework Agreement and by signing below agree to be bound by its terms.</p>
+
+<p>1.9       All sections, including the Invitation to Tender (known as the Invitation to Apply on the Digital Marketplace) and Schedules to this Framework Agreement are expressly part of this Framework Agreement.</p>
+
+<p>1.10     CCS will pay £1 to the Supplier to perform its obligations under this Framework Agreement, receipt of which is acknowledged by the Supplier signing this Framework Agreement.</p>
+
+<p>1.11     The finalised Framework Agreement will include a signature page signed by the Supplier and by the Crown Commercial Service, and the rest of the Framework Agreement document.</p>
+
+<p>1.12     The signature page and the rest of the Framework Agreement document are counterparts before signing and duplicate originals after signing. The duplicate originals together make one Framework Agreement signed by all the necessary Parties.</p>
+
+        {{ govukInput({
+          label: {
+            text: "Your full name",
+            classes: "govuk-!-font-weight-bold"
+          },
+          id: "full-name",
+          name: "full-name"
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Your role in the company",
+            classes: "govuk-!-font-weight-bold"
+          },
+          id: "role",
+          name: "role"
+        }) }}
+
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+        {{ govukCheckboxes({
+          idPrefix: "agree",
+          name: "agree",
+          items: [
+            {
+              value: "agree",
+              text: "I confirm the framework agreement"
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Sign agreement</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
