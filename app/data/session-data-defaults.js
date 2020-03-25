@@ -21,4 +21,7 @@ module.exports = {
 
   // Insert values here
 
+  "company-name": "[company name]",
+  "company-registered-address": "[company address]",
+  "company-number": "[company number]",
 }
