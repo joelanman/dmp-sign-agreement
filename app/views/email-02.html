@@ -9,12 +9,34 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
-        Your framework agreement has been counter-signed
+        Your framework agreement has been signed
       </h1>
-      
-        <p>Dear supplier</p>
-        <p>The Crown Commercial Service has countersigned your framework agreement. You can <a href="countersigned">download the framework agreement</a> from your Digital Marketplace account.</p>
-        <p>You can sell services on the Digital Marketplace from 2 July 2020.</p>
+
+      <p>
+      {{ data['full-name'] | default('[full name]') }} has signed the G-Cloud 12 Framework Agreement
+      on behalf of {{ data['company-name'] | default('[company name]') }}
+      on {{ data['signature-date'] | default('[date]') }} at {{ data['signature-time'] | default('[time]') }}.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>
+      Your signed framework agreement will be sent to the Crown Commercial Service to be countersigned.
+      </p>
+
+      <p>
+      We'll email you when the countersigned agreement is available.
+      </p>
+
+      <p>
+      You'll need to wait for CCS to countersign your agreement before you can sell services.
+      </p>
+
+      <p>
+      <a class="govuk-link" href="/framework">View the framework agreement</a>
+      </p>
     </div>
   </div>
 
