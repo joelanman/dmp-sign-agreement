@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Legal authority
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Sign agreement",
+      href: "#"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">You cannot sign the framework agreement</h1>
+
+      <p>
+      Only someone with legal authority in your company,
+      like a director or company secretary,
+      can sign the Framework Agreement.
+      </p>
+
+      <p>
+      <a href="#">Return to Digital Marketplace account</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}
