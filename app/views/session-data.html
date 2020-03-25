@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Company details
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Session data</h1>
+
+      <p>Set data for the prototype session.</p>
+
+      <form class="form" action="" method="post">
+        {{ govukInput({
+          label: {
+            text: "Company name",
+            classes: "govuk-!-font-weight-bold"
+          },
+          id: "company-name",
+          name: "company-name",
+          value: data["company-name"]
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Company registered address",
+            classes: "govuk-!-font-weight-bold"
+          },
+          id: "company-registered-address",
+          name: "company-registered-address",
+          value: data["company-registered-address"]
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Company number",
+            classes: "govuk-!-font-weight-bold"
+          },
+          id: "company-number",
+          name: "company-number",
+          value: data["company-number"]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Save</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
