@@ -23,4 +23,8 @@ router.post('/accept', function (req, res) {
   res.redirect('/confirmation')
 })
 
+router.get('/countersign', function (req, res) {
+  res.redirect('/email-03')
+})
+
 module.exports = router
