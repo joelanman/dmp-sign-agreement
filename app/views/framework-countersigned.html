@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  G-Cloud 12
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Digital Marketplace</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/examples">Your account</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        Your G-Cloud 12 application
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Your G-Cloud 12 application
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        Legal documents
+      </h2>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Person who signed"
+            },
+            value: {
+              html: "<p>" + data['full-name'] + "</p>" + "<p>" + data['role'] + "</p>"
+            }
+          },
+          {
+            key: {
+              text: "Submitted by"
+            },
+            value: {
+              html: "<p>" + data['full-name'] + "</p>" + "<p>" + data['email_address'] + "</p>"
+                  + "<p>" + data['signature-date'] + " at " + data['signature-time'] + "</p>"
+            }
+          },
+          {
+            key: {
+              text: "Countersignature"
+            },
+            value: {
+              html: "<p>" + data['countersignature-full-name'] + "</p>" + "<p>" + data['countersignature-role'] + "</p>"
+            }
+          }
+        ]
+      }) }}
+
+      <p>
+      <a class="govuk-link" href="#">Read the standard framework agreement</a>
+      </p>
+
+      <p>
+      <a class="govuk-link" href="#">View your signed framework agreement</a>
+      </p>
+
+      <p>
+      You can start selling your G-Cloud 12 services on the Digital Marketplace from Tuesday 2 July 2025.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        Guidance
+      </h2>
+
+      <p>
+      <a class="govuk-link" href="#">Read about how to sell your services</a>
+      </p>
+
+      <h2 class="govuk-heading-m">
+        Communications
+      </h2>
+
+      <p>
+      <a class="govuk-link" href="#">View communications and clarification questions</a>
+      </p>
+    </div>
+  </div>
+{% endblock %}

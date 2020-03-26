@@ -25,8 +25,8 @@ module.exports = {
   "company-registered-address": "[company address]",
   "company-number": "[company number]",
 
-  "countersignature-full-name": "[countersigner name]",
-  "countersignature-role": "[countersigner role]",
+  "countersignature-full-name": "J. Doe",
+  "countersignature-role": "Director",
 
   "email_address": "[email address]",
   "full-name": "[full name]",
