@@ -35,7 +35,7 @@
         rows: [
           {
             key: {
-              text: "Person who signed"
+              text: "Signed by"
             },
             value: {
               html: "<p>" + data['full-name'] + "</p>" + "<p>" + data['role'] + "</p>"
@@ -52,10 +52,12 @@
           },
           {
             key: {
-              text: "Countersignature"
+              text: "Countersigned by"
             },
             value: {
-              html: "<p>" + data['countersignature-full-name'] + "</p>" + "<p>" + data['countersignature-role'] + "</p>"
+              html: "<p>" + data['countersignature-full-name'] + "</p>"
+                  + "<p>" + data['countersignature-role'] + "</p>"
+                  + "<p>Crown Commercial Service</p>"
             }
           }
         ]
@@ -70,7 +72,7 @@
       </p>
 
       <p>
-      You can start selling your G-Cloud 12 services on the Digital Marketplace from Tuesday 2 July 2025.
+      You can start selling your G-Cloud 12 services on the Digital Marketplace from Monday 28 September 2025.
       </p>
 
       <h2 class="govuk-heading-m">
